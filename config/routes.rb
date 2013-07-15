@@ -1,10 +1,10 @@
 N2L::Application.routes.draw do
   devise_for :users
 
-  devise_scope :user do
+  # devise_scope :user do
     # Map root to users/sign_in
-      root to: "devise/sessions#new"
-  end
+  #    root to: "devise/sessions#new"
+  # end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -55,7 +55,7 @@ N2L::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'devise/sessions#new'
+  root :to => 'home#index'
 
   # See how all your routes lay out with "rake routes"
 
