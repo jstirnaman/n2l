@@ -7,9 +7,17 @@ class User
          :recoverable, :rememberable, :trackable, :validatable
 
   ## Database authenticatable
+  field :name,
+  validates_presence_of :name
+  
   field :email,              :type => String, :default => ""
   field :encrypted_password, :type => String, :default => ""
-  
+  validates_uniqueness_of :name, :email, :case_sensitive => false
+
+  ## Prevent imposter web forms that would allow changing of passwords
+  ## through the mass-assignment operations of update_attributes(attrs) and new(attrs)
+  attr_accessible :name, :email, :password, :password_confirmation, :remember_me
+
   ## Recoverable
   field :reset_password_token,   :type => String
   field :reset_password_sent_at, :type => Time
