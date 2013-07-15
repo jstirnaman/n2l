@@ -7,7 +7,7 @@ class User
          :recoverable, :rememberable, :trackable, :validatable
 
   ## Database authenticatable
-  field :name,
+  field :name,              :type => String, :default => ""
   validates_presence_of :name
   
   field :email,              :type => String, :default => ""
