@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Short text:</b>
+  <%= @response.short_text %>
+</p>
+
+<p>
+  <b>Collection time:</b>
+  <%= @response.collection_time %>
+</p>
+
+
+<%= link_to 'Edit', edit_response_path(@response) %> |
+<%= link_to 'Back', responses_path %>

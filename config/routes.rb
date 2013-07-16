@@ -1,4 +1,22 @@
 N2L::Application.routes.draw do
+  resources :answers
+
+
+  resources :flags
+
+
+  resources :comments
+
+
+  resources :responses
+
+
+  resources :questions
+
+
+  resources :interviews
+
+
   devise_for :users
 
   # devise_scope :user do
